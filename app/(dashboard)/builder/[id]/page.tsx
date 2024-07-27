@@ -4,7 +4,7 @@ import FormBuilder from "./FormBuilder";
 
 const BuilderPage = async ({ params }: { params: { id: string } }) => {
   const { id } = params;
-  const form = await GetFormById(Number(id));
+  const form = await GetFormById(id);
   if (!form) {
     throw new Error("form not found");
   }

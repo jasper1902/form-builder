@@ -33,7 +33,7 @@ const CreateFormBtn = () => {
   const form = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   });
-  const router = useRouter()
+  const router = useRouter();
 
   async function onSubmit(values: FormSchemaType) {
     try {
@@ -42,7 +42,7 @@ const CreateFormBtn = () => {
         title: "Success",
         description: "Form created successfully",
       });
-      router.push(`/builder/${formId}`)
+      router.push(`/builder/${formId}`);
     } catch (error) {
       toast({
         title: "Error",
@@ -110,11 +110,10 @@ const CreateFormBtn = () => {
             className="w-full mt-4"
           >
             Save
+            {form.formState.isSubmitting && (
+              <ImSpinner2 className="animate-spin" />
+            )}
           </Button>
-
-          {form.formState.isSubmitting && (
-            <ImSpinner2 className="animate-spin" />
-          )}
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -6,7 +6,7 @@ const Error = () => {
   const router = useRouter();
   useEffect(() => {
     router.push("/sign-in");
-  }, []);
+  }, [router]);
   return <></>;
 };
 

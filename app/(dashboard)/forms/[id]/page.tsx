@@ -22,7 +22,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 const FormDetailPage = async ({ params }: { params: { id: string } }) => {
   const { id } = params;
-  const form = await GetFormById(Number(id));
+  const form = await GetFormById(id);
   if (!form) {
     throw new Error("form not found");
   }
@@ -99,7 +99,7 @@ type Row = Record<string, string> & {
   submittedAt: Date;
 };
 
-async function SubmissionsTable({ id }: { id: number }) {
+async function SubmissionsTable({ id }: { id: string }) {
   const form = await GetFormWithSubmissions(id);
 
   if (!form) {

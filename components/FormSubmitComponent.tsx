@@ -6,6 +6,7 @@ import { HiCursorClick } from "react-icons/hi";
 import { toast } from "./ui/use-toast";
 import { ImSpinner2 } from "react-icons/im";
 import { SubmitForm } from "@/actions/form";
+import AnimatedRings from "./AnimatedRings";
 
 type Props = { formUrl: string; content: FormElementInstance[] };
 

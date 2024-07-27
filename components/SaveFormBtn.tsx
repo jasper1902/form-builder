@@ -6,7 +6,7 @@ import { UpdateFormContent } from "@/actions/form";
 import { toast } from "./ui/use-toast";
 import { FaSpinner } from "react-icons/fa";
 
-type Props = { id: number };
+type Props = { id: string };
 
 function SaveFormBtn({ id }: Props) {
   const { elements } = useDesigner();
