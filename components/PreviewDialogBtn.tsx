@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { MdPreview } from "react-icons/md";
-import useDesigner from "./hooks/useDesigner";
+import { useDesigner } from "@/store/designer";
 import { DialogTrigger, Dialog, DialogContent } from "./ui/dialog";
 import { FormElements } from "./FormElements";
 

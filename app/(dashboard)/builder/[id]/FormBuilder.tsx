@@ -1,7 +1,7 @@
 "use client";
 import Designer from "@/components/Designer";
 import DragOverlayWrapper from "@/components/DragOverlayWrapper";
-import useDesigner from "@/components/hooks/useDesigner";
+import { useDesigner } from "@/store/designer";
 import PreviewDialogBtn from "@/components/PreviewDialogBtn";
 import PublishFormBtn from "@/components/PublishFormBtn";
 import SaveFormBtn from "@/components/SaveFormBtn";
